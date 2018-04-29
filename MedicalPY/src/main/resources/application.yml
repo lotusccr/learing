@@ -1,0 +1,33 @@
+
+server:
+  port: 8081
+spring:
+    devtools:
+      restart:
+        exclude: src
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/medicalpy
+        username: root
+        password: root
+      #配置自动建表：updata:没有表新建，有表更新操作,控制台显示建表语句
+    jpa: 
+       hibernate:  
+             ddl-auto:  update
+             naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+       show-sql: true
+       packages.to.scan: com.medical.config
+                 
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml   
+logging:  
+  level:  
+    org:  
+      hibernate:  
+        SQL: DEBUG  
+        type:  
+          descriptor:  
+            sql: TRACE   
+      
+     
+  

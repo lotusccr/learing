@@ -1,0 +1,25 @@
+div.div-border-main{
+    border: 2px solid #ccc!important;
+    padding:14px;
+    border-radius: 13px!important;
+    
+}
+
+div.div-border-left{
+    border: 2px solid #ccc!important;
+    padding:14px;
+    border-radius: 13px!important;
+    margin-left: 5px;
+}
+
+div.div-border-right{
+    border: 2px solid #ccc!important;
+    padding:14px;
+    border-radius: 13px!important;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+div.padding-top{
+    padding-top: 20px;
+}

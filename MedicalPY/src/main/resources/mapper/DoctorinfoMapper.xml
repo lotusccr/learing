@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.medical.dao.DoctorinfoDao">
+	<resultMap type="doctorinfoDomain" id="doctorinfoDomain">  
+        <result column="dno" property="dno"/>  
+        <result column="dname" property="dname"/>  
+        <result column="dsex" property="dsex"/>  
+        <result column="department" property="department"/>  
+        <result column="position" property="position"/>  
+        <result column="phone" property="phone"/>  
+        <result column="count" property="count"/>  
+    </resultMap>
+
+	<select id="findDoctorAll" parameterType="String" resultMap="doctorinfoDomain">
+		select * from doctorinfo d where d.dno = #{dno}
+	</select>
+</mapper>
