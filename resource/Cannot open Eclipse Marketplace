@@ -1,0 +1,3 @@
+Cannot open Eclipse Marketplace
+
+今天给eclipse安装插件的时候出现各种cannot connect to...的问题，想打开eclipse marketplace来安装插件出现Cannot open Eclipse Marketplace，网上一通查找，终于在老美的网站上找到了解决方式，window->preferences->general->network connection，右边的active provider选择manual，勾上HTTP、HTTPS、SOCKS，apply一下，重启eclipse就行了。出现这个问题八成是因为翻墙了，现在记录一下，免得以后又出现这个问题不知道怎么解决。

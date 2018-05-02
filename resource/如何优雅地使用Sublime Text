@@ -1,0 +1,3 @@
+					如何优雅地使用Sublime Text
+	里面有涉及如何使用MarkDown Editing
+SublimeText不仅仅是能够查看和编辑 Markdown 文件，但它会视它们为格式很糟糕的纯文本。这个插件通过适当的颜色高亮和其它功能来更好地完成这些任务。关于如何在SublimeText下高效些东西可参见文章：sublime text 2(3)下的Markdown写作 

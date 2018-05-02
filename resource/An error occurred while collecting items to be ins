@@ -1,0 +1,5 @@
+An error occurred while collecting items to be installed session context was:(profile=epp.package.jee
+
+就用如下方式解决：在运行命令行中切换到Eclipse的安装根目录，即eclipse.exe所在目录执行命令:
+
+eclipse -application org.eclipse.equinox.p2.garbagecollector.application -profile **** （****是configuration/concfig.ini里eclipse.p2.profile项的值）。

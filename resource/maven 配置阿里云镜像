@@ -1,0 +1,43 @@
+maven 配置阿里云镜像--https://blog.csdn.net/u012424449/article/details/77853983
+打开maven配置文件，找到标签，添加如下：
+
+<mirrors>
+
+  <mirror> 
+    <id>alimaven</id> 
+    <name>aliyun maven</name> 
+    <url>http://maven.aliyun.com/nexus/content/groups/public/</url> 
+    <mirrorOf>central</mirrorOf> 
+  </mirror> 
+
+</mirrors>
+
+设置全局的jdk，在配置文件配置如下：
+
+<profile>  
+    <id>jdk18</id>  
+    <activation>  
+        <activeByDefault>true</activeByDefault>  
+        <jdk>1.8</jdk>  
+    </activation>  
+    <properties>  
+        <maven.compiler.source>1.8</maven.compiler.source>  
+        <maven.compiler.target>1.8</maven.compiler.target>  
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>  
+    </properties>   
+</profile>  
+
+设置局部的jdk，在项目的pom,xml文件中添加如下build元素
+
+<build>  
+    <plugins>  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-compiler-plugin</artifactId>  
+            <configuration>  
+                <source>1.7</source>  
+                <target>1.7</target>  
+            </configuration>  
+        </plugin>  
+    </plugins>  
+</build> 
